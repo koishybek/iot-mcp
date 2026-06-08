@@ -764,5 +764,10 @@ def user_read(id: int) -> str:
 #  ENTRY POINT
 # ═══════════════════════════════════════════════════════════════════════════
 
-if __name__ == "__main__":
+def app():
+    """Entrypoint for Prefect Cloud deployment."""
     mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)
+
+
+if __name__ == "__main__":
+    app()
